@@ -238,6 +238,7 @@ func (tc *conn) logf(format string, args ...interface{}) {
 }
 
 func laddr(c net.PacketConn) *net.UDPAddr {
+    prints("%s",c.LocalAddr().(*net.UDPAddr))
 	return c.LocalAddr().(*net.UDPAddr)
 }
 

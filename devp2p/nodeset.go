@@ -116,6 +116,7 @@ func (ns nodeSet) topN(n int) nodeSet {
 
 // verify performs integrity checks on the node set.
 func (ns nodeSet) verify() error {
+    prints("%s",nodeSet)
 	for id, n := range ns {
 		if n.N.ID() != id {
 			return fmt.Errorf("invalid node %v: ID does not match ID %v in record", id, n.N.ID())
